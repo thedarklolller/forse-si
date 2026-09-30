@@ -1,0 +1,89 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="description" content="forse.si — chiedi pure, tanto una risposta la inventiamo.">
+  <meta name="theme-color" content="#1f211f">
+  <title>forse.si</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark">
+  <main class="page">
+    <header class="topbar">
+      <a class="logo" href="/">forse.si</a>
+
+      <button
+        id="themeToggle"
+        class="theme-toggle"
+        type="button"
+        aria-label="Attiva modalità scura"
+        aria-pressed="false"
+      >
+        <span id="themeIcon" aria-hidden="true">☾</span>
+        <span id="themeLabel">dark</span>
+      </button>
+    </header>
+
+    <section class="hero">
+      <div class="hero-copy">
+        <p class="small-note">sito approvato da nessuno</p>
+        <h1>boh.<br>chiedi.</h1>
+        <p class="subtitle">
+          Hai un dubbio? Ottimo.<br>
+          Noi ne abbiamo ancora di più.
+        </p>
+      </div>
+
+      <form id="questionForm" class="ask-box">
+        <label for="question">scrivi la cosa che non riesci a decidere</label>
+
+        <textarea
+          id="question"
+          rows="4"
+          maxlength="180"
+          placeholder="tipo: le scrivo oppure faccio finta di niente?"
+          required
+        ></textarea>
+
+        <div class="form-row">
+          <span id="counter">0/180</span>
+          <button type="submit">dimmi una roba</button>
+        </div>
+      </form>
+    </section>
+
+    <section id="result" class="result" hidden aria-live="polite">
+      <div class="result-top">
+        <span>forse.si ha parlato</span>
+        <span id="mood">umore: discutibile</span>
+      </div>
+
+      <p id="answer" class="answer"></p>
+      <p id="comment" class="comment"></p>
+
+      <div class="actions">
+        <button type="button" id="again">nah, rifai</button>
+        <button type="button" id="reset">altra crisi</button>
+      </div>
+
+      <p class="fineprint">
+        * nessuna intelligenza, naturale o artificiale, si assume responsabilità per questa risposta.
+      </p>
+    </section>
+
+    <footer>
+      <div class="footer-main">
+        <span>forse.si</span>
+        <span>funziona? forse sì.</span>
+      </div>
+      <p class="footer-disclaimer">
+        forse.si non si assume alcuna responsabilità per decisioni prese sulla base delle risposte del sito
+        o per ciò che potrebbe succedere dopo.
+      </p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
